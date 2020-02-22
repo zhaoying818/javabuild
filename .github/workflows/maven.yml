@@ -21,14 +21,13 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-check:
+  formatting:
     runs-on: ubuntu-latest
     steps:
-      - name: Google Java Format
-        uses: axel-op/googlejavaformat-action@v2.0.0
+      - uses: actions/checkout@v2 # v2 minimum required
+      - uses: axel-op/googlejavaformat-action@v2.0.0
         with:
-          args: --replace
-          files: **/*.java
+          args: "--skip-sorting-imports --replace"
       
    
    
