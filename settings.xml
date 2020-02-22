@@ -24,7 +24,7 @@
     <server>
       <id>github</id>
       <username>zhaoying818</username>
-      <password>${token}</password>
+      <password>token</password>
     </server>
   </servers>
 </settings>
