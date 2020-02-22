@@ -43,5 +43,5 @@ jobs:
       - name: pmd
         run: mvn -B pmd:pmd --file pom.xml
       - name: findbugs
-        run: mvn -B findbugs:finfbugs --file pom.xml
+        run: mvn -B findbugs:findbugs --file pom.xml
         
