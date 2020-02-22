@@ -21,6 +21,8 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Deploy to github package
+      run: mvn deploy -Dregistry=https://maven.pkg.github.com/zhaoying818 -Dtoken=GH_TOKEN
   
   formatting:
     runs-on: ubuntu-latest
