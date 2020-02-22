@@ -23,7 +23,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Deploy to github package
       env:
-        GH_TOKEN: ${{secrets.ACCESS_TOKEN}}
+        GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: mvn deploy -s settings.xml -Dtoken=${GH_TOKEN}
   
   formatting:
