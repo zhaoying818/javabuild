@@ -24,7 +24,7 @@ jobs:
     - name: Deploy to github package
       env:
         GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-      run: mvn deploy -s settings.xml -Dtoken=${GH_TOKEN}
+      run: echo ${GH_TOKEN} mvn deploy -s settings.xml -Dtoken=${GH_TOKEN}
   
   formatting:
     runs-on: ubuntu-latest
