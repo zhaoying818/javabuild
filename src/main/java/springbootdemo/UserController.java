@@ -8,29 +8,29 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * controller类
- * @author Administrator
  *
+ * @author Administrator
  */
 @RestController
 @EnableAutoConfiguration
 @SpringBootApplication
 public class UserController {
 
-    @RequestMapping("/login")
-    public User login(){
-        User user= new User();
-        user.setId(123);
-        user.setUsername("qwe");
-        user.setPassword("456");
-        return user;
-    }
+  @RequestMapping("/login")
+  public User login() {
+    User user = new User();
+    user.setId(123);
+    user.setUsername("qwe");
+    user.setPassword("456");
+    return user;
+  }
 
-    @RequestMapping("/print")
-    public String print1(){
-        return "HELLO WORLD";
-    }
+  @RequestMapping("/print")
+  public String print1() {
+    return "HELLO WORLD";
+  }
 
-    public static void main(String[] args){
-        SpringApplication.run(UserController.class);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(UserController.class);
+  }
 }
